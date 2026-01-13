@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Writer</title>
+</head>
+<body>
+
+    <h2>Writer Form Submitted</h2>
+
+</body>
+</html>
