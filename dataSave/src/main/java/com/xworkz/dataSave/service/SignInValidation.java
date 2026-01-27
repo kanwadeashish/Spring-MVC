@@ -1,0 +1,23 @@
+package com.xworkz.dataSave.service;
+
+import com.xworkz.dataSave.repository.Database;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class SignInValidation {
+
+    @Autowired
+    Database database;
+
+    public boolean validate(String username, String password) {
+
+        String dbPassword = database.getPasswordByUsername(username);
+
+        if (dbPassword == null) {
+            return false; // username not found
+        }
+
+        return dbPassword.equals(password);
+    }
+}
